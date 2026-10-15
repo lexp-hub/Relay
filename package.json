@@ -1,0 +1,32 @@
+{
+  "name": "relay",
+  "version": "0.1.0",
+  "description": "Minimalist open-source entity-relationship & SQL schema design studio",
+  "type": "module",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc && node --input-type=module -e \"import('./dist/ui.js').then(m => import('fs').then(fs => fs.writeFileSync('index.html', m.renderDashboardHTML(), 'utf8')))\"",
+    "start": "npm run build && node dist/index.js",
+    "dev": "npm run build && node dist/index.js"
+  },
+  "keywords": [
+    "er-diagram",
+    "sql-generator",
+    "schema-design",
+    "database-modeling",
+    "entity-relationship",
+    "postgres",
+    "mysql",
+    "sqlite",
+    "dbml",
+    "mermaid-er",
+    "open-source"
+  ],
+  "author": "Lex",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.17.0",
+    "typescript": "^5.7.3"
+  }
+}
+
